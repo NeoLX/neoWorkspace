@@ -1,0 +1,6 @@
+{
+	"webapp":{
+		"description":"Neo servers",
+		"default_page":"/index.html"
+	}
+}
