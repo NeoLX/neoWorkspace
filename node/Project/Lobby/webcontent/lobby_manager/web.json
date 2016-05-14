@@ -1,0 +1,7 @@
+{
+	"webapp":{
+		"description":"Neo servers",
+        "root":"/",
+		"defaultPage":"index.html"
+	}
+}

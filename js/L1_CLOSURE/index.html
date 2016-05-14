@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<script type="text/javascript" src="./lib/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript">
+		//1.按类封装对象
+		function a(){
+			var aa = "aa";//私有变量，外部不可见，不可操作
+			this.bb = "bb";//公有变量，外部可直接操作
+
+			//封装AA
+			this.getAA = function(){
+				return aa;
+			}
+		
+			this.setAA = function(arg){
+				aa = arg;
+			}
+		}
+
+		//2.按原型方式
+		//只能定义公有变量和方法
+		a.prototype.cc = "cc";
+		a.prototype.getCC = function(){
+			return this.cc;
+		};
+
+		//3.按json封装对象
+		//全部成员可见
+		//不适用prototype原型
+		var ob = {
+			aa: "aa",
+			bb: "bb",
+			getAA: function(){
+				return this.aa;
+			},
+			setAA: function (arg) {
+				this.aa = arg;
+			}
+		};		
+
+	</script>
+</head>
+<body>
+	<div id="content"></div>
+	<script type="text/javascript">
+
+		var log = function(str){
+			$("#content").append("<div>");
+			$("#content").append(str);
+			$("#content").append("</div>");
+		};
+		// log("对象A：");
+		// log("//1.按类封装对象");
+		// log("function a(){");
+		// log("	var aa = \"aa\";//私有变量，外部不可见，不可操作");
+		// log("	this.bb = \"bb\";//公有变量，外部可直接操作");
+		// log("");
+		// log("	//封装AA");
+		// log("	this.getAA = function(){");
+		// log("		return aa;");
+		// log("	}");
+		// log("");
+		// log("	this.setAA = function(arg){");
+		// log("		aa = arg;");
+		// log("	}");
+		// log("}");
+		log("<h1>测试对象 A</h1>");
+		var oa = new a();
+		log("直接取值法:");
+		log("取私有变量oa.aa:" + oa.aa);
+		log("取公有变量oa.bb:" + oa.bb);
+		log("");
+		log("取封装方法:");
+		log("oa.getAA():" + oa.getAA());
+		oa.setAA("AA");
+		log("oa.getAA() after setAA(\"AA\"):" + oa.getAA());
+		log("oa.cc:" + oa.cc);
+		log("oa.getCC():" + oa.getCC());
+		log("下标取值法：oa[\"bb\"]:" + oa["bb"]);
+		log("");
+		log("<h1>测试对象 B</h1>");		
+		log("ob.aa:" + ob.aa);
+		log("ob.bb:" + ob.bb);
+		log("ob.getAA():" + ob.getAA());
+		ob.setAA("AA");
+		log("ob.getAA() after setAA():" + ob.getAA());
+		
+		
+	</script>
+</body>
+</html>

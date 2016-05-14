@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    
+    <script src="./lib/jquery-2.2.1.min.js"></script>
+    <script src="./lib/jquery.cookie.js"></script>
+    <script src="./lib/json2.js"></script>
+    <script src="./lib/lobby.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+            function(){
+                
+            // alert("cookie：" + document.cookie);
+            
+            $.session.set("hello","咪咪酱");
+            
+            // alert("cookie：" + document.cookie);
+            
+            alert($.session.get("hello"));
+                // alert($.localSession.get("hello"));
+                
+                // $.localSession.set("hello", "hello lobby");
+    // $.post("/hello",
+    //     {
+    //         name:"lobby"
+    //     },
+    //     function(data,status){
+    //         alert(data);
+    //         alert(status);
+    //     }
+    // );
+                // var ws = $(window).session;
+                
+                // if(!ws && ws != undefined){
+                //     alert("get:" + ws);   
+                // }else{
+                //     var w = $(window);
+                //     alert("window:" + w);
+                //     alert("window2:" + window);
+                //     alert("window.ss:" + window.session);
+                //     window.session = {};
+                //     w.session = {};
+                //     alert("new:" + w.session);
+                //     alert("new2:" + window.session);                 
+                //     // session(session.scope.GLOBEL);   
+                // }       
+            }
+        )
+    </script>
+</head>
+<body>
+	PUBLIC hello world！
+</body>
+</html>
