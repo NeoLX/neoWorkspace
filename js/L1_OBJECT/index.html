@@ -26,6 +26,10 @@
 		a.prototype.getCC = function(){
 			return this.cc;
 		};
+		a.prototype.setAAA = function(arg){
+			// aa = arg;
+			this.setAA(arg);
+		};
 
 		//3.按json封装对象
 		//全部成员可见
@@ -52,21 +56,13 @@
 			$("#content").append(str);
 			$("#content").append("</div>");
 		};
-		// log("对象A：");
-		// log("//1.按类封装对象");
-		// log("function a(){");
-		// log("	var aa = \"aa\";//私有变量，外部不可见，不可操作");
-		// log("	this.bb = \"bb\";//公有变量，外部可直接操作");
-		// log("");
-		// log("	//封装AA");
-		// log("	this.getAA = function(){");
-		// log("		return aa;");
-		// log("	}");
-		// log("");
-		// log("	this.setAA = function(arg){");
-		// log("		aa = arg;");
-		// log("	}");
-		// log("}");
+		log("<h1>测试方法 a</h1>");
+		for(var i in a){
+			log("a[" + i + "]:{" + a[i] + "}");
+		}
+		for(var i in a.prototype){
+			log("a.prototype[" + i + "]:{" + a.prototype[i] + "}");
+		}
 		log("<h1>测试对象 A</h1>");
 		var oa = new a();
 		log("直接取值法:");
@@ -77,6 +73,8 @@
 		log("oa.getAA():" + oa.getAA());
 		oa.setAA("AA");
 		log("oa.getAA() after setAA(\"AA\"):" + oa.getAA());
+		oa.setAAA("AAA");
+		log("oa.getAA() after setAAA(\"AAA\"):" + oa.getAA());
 		log("oa.cc:" + oa.cc);
 		log("oa.getCC():" + oa.getCC());
 		log("下标取值法：oa[\"bb\"]:" + oa["bb"]);
