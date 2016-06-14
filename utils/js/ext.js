@@ -25,7 +25,7 @@
             for(var name in properties){
                 proto[name] = typeof properties[name] == 'function' && //检测当前提供的是否为函数
                               typeof _super[name] == 'function' && //检测当前提供的函数名是否已经存在于父类的原型对象中，如果是，则需要下面的操作，以保证父类中的方法不会被覆盖且可以以某种方式被调用，如果否，则直接将该函数赋值为父类实例的方法
-                              superPattern.test(properties[name]) ? f//检测当前提供的函数内是否使用了_super方法，如果有使用_super方法，则需要下面的操作，以保证父类中的方法不会被覆盖且可以以某种方式被调用，如果没有用到_super方法，则直接将该函数赋值为父类实例的方法，即使父类原型中已经拥有同名方法（覆盖）
+                              superPattern.test(properties[name]) ? //检测当前提供的函数内是否使用了_super方法，如果有使用_super方法，则需要下面的操作，以保证父类中的方法不会被覆盖且可以以某种方式被调用，如果没有用到_super方法，则直接将该函数赋值为父类实例的方法，即使父类原型中已经拥有同名方法（覆盖）
 
                     // 使用一个马上执行的函数，返回一个闭包，这样每个闭包引用的都是各自的name和fn。
                     (function(name, fn){

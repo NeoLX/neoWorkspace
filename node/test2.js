@@ -13,7 +13,9 @@ var app = express();
 console.log(webApp);
 // console.log(app);
 
-var web = new webApp(app, "./Project/Lobby/webcontent/neotest1");
+var web = new webApp(app, "./node/Project/Lobby/webcontent/neotest1");
 
-// app.listen(8081);
+
+
+app.listen(8081);
 
