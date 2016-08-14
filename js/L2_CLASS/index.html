@@ -3,49 +3,51 @@
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<script type="text/javascript" src="./lib/extendable.js"></script>
+	<!--<script type="text/javascript" src="./lib/extendable.js"></script>-->
+	<script type="text/javascript" src="./lib/objectTool.js"></script>
+	<script type="text/javascript" src="./lib/objectTest.js"></script>
 	<script type="text/javascript">
-		var a = function(){
-			var aa = "aa";
-			this.bb = "bb";
+		// var a = function(){
+		// 	var aa = "aa";
+		// 	this.bb = "bb";
 
-			this.getAA = function(){
-				return aa;
-			}
-		}
-		a.prototype.cc = "cc";
-		a.prototype.setBB = function(arg){
-			this.bb = arg;
-		};
-		a.obj = {};
-		a.obj.o = "o";
+		// 	this.getAA = function(){
+		// 		return aa;
+		// 	}
+		// }
+		// a.prototype.cc = "cc";
+		// a.prototype.setBB = function(arg){
+		// 	this.bb = arg;
+		// };
+		// a.obj = {};
+		// a.obj.o = "o";
 	</script>
 </head>
 <body>
 	<div id="content"></div>
 	<script type="text/javascript">
-		var b = Class(function(){
-			this.dd = "dd";
-			this.getAA = function(){
-				return "hello " + this._super.getAA();
-			}
-		});
-		alert(b);
-		alert(b.prototype);
-		alert(b.dd);
-		alert(b.getAA);
-		console.log(b);
-		// var ob = new b();
-		// ob.cc = "CC";
-		// alert(ob.getAA());
-		// alert(ob.bb);
-		// ob.setBB("BB");
-		// alert(ob.bb);
-		// alert(ob.cc);
-		// alert(ob._super.cc);
-		// alert(a.obj.o);
-		// // alert(b.obj.o);
-		// alert(ob.dd);
+		// var b = Class(function(){
+		// 	this.dd = "dd";
+		// 	this.getAA = function(){
+		// 		return "hello " + this._super.getAA();
+		// 	}
+		// });
+		// alert(b);
+		// alert(b.prototype);
+		// alert(b.dd);
+		// alert(b.getAA);
+		// console.log(b);
+		// // var ob = new b();
+		// // ob.cc = "CC";
+		// // alert(ob.getAA());
+		// // alert(ob.bb);
+		// // ob.setBB("BB");
+		// // alert(ob.bb);
+		// // alert(ob.cc);
+		// // alert(ob._super.cc);
+		// // alert(a.obj.o);
+		// // // alert(b.obj.o);
+		// // alert(ob.dd);
 		
 	</script>
 </body>

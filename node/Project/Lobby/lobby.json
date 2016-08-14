@@ -1,0 +1,10 @@
+{
+    "servers":
+        [
+            {
+                "name":"myserver",
+                "path":"./webcontent",
+                "port":"8801"
+            }
+        ]
+}
