@@ -1,0 +1,6 @@
+{
+	"webapp":{
+		"description":"Admin Web Site",
+		"defaultPage":"index.html"
+	}
+}

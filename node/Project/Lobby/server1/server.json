@@ -1,0 +1,10 @@
+{
+	"type": "webserver",
+	"webapps":[
+		{
+			"name":"managerPage",
+			"path":"./lobby_manager",
+			"contextRoot":"/admin"
+		}
+	]
+}

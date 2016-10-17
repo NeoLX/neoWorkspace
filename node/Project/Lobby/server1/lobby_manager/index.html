@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./lib/jquery-ui-1.11.4.custom/jquery-ui.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="./lib/jquery-1.12.1.min.js"></script>
+    <script src="./lib/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+//			$("#leftPanel").load("./view/menu.html");
+//          $("#mainPanel").load("./view/lobby_config.html");
+		});
+    </script>
+</head>
+
+<body>
+    <div id="page" class="page-default">
+        <div id="header" class="header-panel-default">
+            <h1>Hello Lobby</h1>
+        </div>
+        <iframe id="leftPanel" class="left-panel-default" src="view/menu.html">
+            
+        </iframe>
+        <iframe id="mainPanel" class="main-panel-default" src="view/lobby_config.html">
+            right
+        </iframe>
+        <button id="button">open</button>
+        <div id="dialog">
+
+            hello world！
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("#button").click(function(){
+            $("#dialog").dialog("open");
+        });
+        
+        $("#dialog").dialog({autoOpen:false});
+    </script>
+
+</body>
+
+</html>
