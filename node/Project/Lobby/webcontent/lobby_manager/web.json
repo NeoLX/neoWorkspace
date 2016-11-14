@@ -1,7 +1,13 @@
 {
-	"webapp":{
-		"description":"Neo servers",
-        "root":"/",
-		"defaultPage":"index.html"
-	}
+	"description": "Neo servers",
+	"root": "/",
+	"defaultPage": "index.html",
+	"static": [
+		{
+			"reqPath": "/",
+			"filePath": "./"
+		}
+	],
+	"midWares": [],
+	"handlers": []
 }
