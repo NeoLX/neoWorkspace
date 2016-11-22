@@ -7,7 +7,7 @@
             "request": "launch",
             // "program": "${workspaceRoot}/js/L2_CLASS/lib/extendable.js",
             //"program": "${workspaceRoot}/node/Project/Lobby/start.js",
-            "program": "${workspaceRoot}/node/Project/Lobby/node_modules/lobby/lib/server2.js",
+            "program": "${workspaceRoot}/node/Project/Lobby/node_modules/lobby/lib/webApp2.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",

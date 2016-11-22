@@ -1,4 +1,9 @@
 {
-	"webcontent": "/webcontent",
-	"port":8081
+	"name":"server1",
+	"port":8081,
+	"webs":[
+		{
+			"dir":"lobby_manager"
+		}
+	]
 }
