@@ -2,29 +2,54 @@
 <html style="height: 100%">
    <head>
        <meta charset="utf-8">
-       <script type="text/javascript" src="./lib/echarts.js"></script>
-       <script type="text/javascript" src="./lib/china.json"></script>
-       <script type="text/javascript" src="barChartCreator.js"></script>
-       <script type="text/javascript" src="mapChartCreator.js"></script>
+       <!--<meta  />-->
+       <script type="text/javascript" src="lib/jquery-1.12.1.min.js" ></script>
+       <script type="text/javascript" src="lib/bootstrap.min.js" ></script>
+       <script type="text/javascript" src="lib/jgestures.min.js" ></script>
        <!--<script type="text/javascript" src="./lib/china.json"></script>-->
-   </head>
-   <body style="height: 100%; margin: 0">
-       <div id="container" style="height: 400px; width: 800px"></div>
-       <div id="container2" style="height: 400px; width: 800px"></div>
+   	
        <script type="text/javascript">
+       		$(document).ready(function(){
+       			var nSH = 0;
+       			var nST = 0;
+       			var nDivH = $('#ta1').height();
+       			$('#ta1').scroll(function(){
+       				console.log($(this));
+       				nSH = $(this)[0].scrollHeight;
+       				nST = $(this)[0].scrollTop;
+       				console.log('nST[' + nST + ']+nDivH[' + nDivH + '] ? nSH[' + nSH + ']');
+       				if(nST + nDivH + 20 >= nSH){
+       					console.log("到底部了, 可以触发翻页了");
+       				}
+       			});
+       		});
+//     		$(window).scroll(function(e){
+//     			console.log(e);
+//     		});
+//          $(document).bind("swipeup swiperightup swipeleftup",function(e,o){
+//          		console.log(e);
+//          		console.log(o);
+////          		console.log("向上划");
+//          })
             
-            //省份
-            var provinces = ['北京','天津','河北','山西','内蒙古','辽宁','吉林','黑龙江','上海','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','广东','广西','海南','重庆','四川','贵州','云南','西藏','陕西','甘肃','青海','宁夏','新疆'];
-            var provincesData = [];
-            //生成随机数
-            for(var i = 0; i < provinces.length; i++){
-                provincesData[i] = Math.round(Math.random()*1000);
-            }
-            
-            barChartCreator("container", provinces, provincesData);
-            mapChartCreator("container2", provinces, provincesData);
-
-
        </script>
+   </head>
+   <body>
+       <div id="container" style="height: 400px; width: 800px">
+       	<div id="mainPanel">
+       		<textarea id='ta1'  style="width: 100px; height: 40px; background-color: #A6E1EC; border-color:#000000;border-width: 1px; boder">
+       			
+       		hello<br />
+       		hello<br />
+       		hello<br />
+       		hello<br />
+       		hello<br />
+       		hello<br />
+       		hello<br />
+       		hello<br />
+       		hello<br />
+       		</textarea>
+       	</div>
+       </div>
    </body>
 </html>

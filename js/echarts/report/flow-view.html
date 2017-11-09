@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="../lib/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="../lib/echarts.min.js"></script>
+		<script type="text/javascript" src="../lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="flowDataBuilder.js"></script>
+		<script type="text/javascript" src="flowBuilder.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				flowView("line");
+				// pieView.draw();
+			});
+
+			var createMainView = function() {
+				var mainViewCrumb = '<li id="mainCrumb">' +
+					'<a href="#" onclick="removeCrumb()">分类情况</a>' +
+					'</li>';
+				$("#breadcrumb").append(mainViewCrumb);
+			}
+			var removeCrumb = function() {
+				$("#mainCrumb").remove();
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--<div class="col-xs-1 col-md-1">
+					<button type="button" class="btn btn-default">
+				  		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"/>返回
+					</button>
+				</div>-->
+				<div>
+					<ol class="breadcrumb" id="breadcrumb">
+						<li>
+							<a href="#" onclick="createMainView()">总体情况</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!--<div class="panel panel-default" style="align-items: center;">
+			<div class="panel-body">-->
+				<div id="line" style="width: 100%; height:600px;"></div>
+			<!--</div>
+		</div>-->
+		<div class="modal fade" id="selectModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 800px;">
+				<div class="modal-content">
+					<div class="modal-body" >
+						<div id="pie" style="width: 800px; height:500px;"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

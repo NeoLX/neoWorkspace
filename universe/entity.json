@@ -1,0 +1,30 @@
+[
+    {
+        "universe":{
+            "galaxy":[
+                {
+                    "id":"",
+                    "name":"",
+                    "starSystem":[
+                        {
+                            "id":"",
+                            "name":"",
+                            "planet":[
+                                
+                            ],
+                            "fixStar":[
+
+                            ],
+                            "miniPlanet":[
+
+                            ],
+                            "wormHole":[
+
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]

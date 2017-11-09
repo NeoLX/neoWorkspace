@@ -1,0 +1,10 @@
+{
+    "galaxy": {
+        "a": ""
+    },
+    "starSystem": {
+        "maxR": 1000,
+        "minR": 100
+    },
+    "fixedStar": {}
+}

@@ -1,0 +1,15 @@
+{
+  "name": "filerec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dirwatcher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^1.7.0",
+    "ftp": "^0.3.10"
+  }
+}

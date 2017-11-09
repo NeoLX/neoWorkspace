@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="../lib/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="../lib/echarts.min.js"></script>
+		<script type="text/javascript" src="../lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="accountTotalPie.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				accountTotalView("pie", "line", showPieChart);
+				// pieView.draw();
+			});
+			var showPieChart = function() {
+				$("#pieModal").modal("show");
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+		<div id="line" style="width: 100%; height:800px;"></div>
+		<!--<div class="panel">
+			<div class="panel-heading">
+				客户星级情况
+			</div>
+		</div>-->
+		</div>
+		<div class="modal fade" id="pieModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width: 800px;">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div id="pie" style="width: 800px; height:500px;"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

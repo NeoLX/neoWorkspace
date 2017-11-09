@@ -14,6 +14,13 @@
        <script type="text/javascript">
 var dom = document.getElementById("container");
 var myChart = echarts.init(dom);
+myChart.on("click", function(ps){
+	var str = "";
+	for(var i in ps){
+		str += "[" + i + "]=" + ps[i] + "\n";
+	}
+	alert(str);
+});
 var app = {};
 option = null;
 var xAxisData = [];

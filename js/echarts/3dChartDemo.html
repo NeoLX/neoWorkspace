@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/echarts/dist/echarts.min.js"></script>
+		<script src="node_modules/echarts-gl/dist/echarts-gl.min.js"></script>
+		<script src="lib/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				var chart = echarts.init(document.getElementById('chart'));
+
+				var arr = [];
+				for(var t = 0; t < 1; t += 0.01) {
+					arr.push([t, t, t]);
+				}
+
+				chart.setOption({
+					grid3D: {},
+					xAxis3D: {},
+					yAxis3D: {},
+					zAxis3D: {},
+					series: [{
+							type: 'scatter3D',
+							symbolSize: 50,
+							data: [
+								[-1, -1, -1],
+								[0, 0, 0],
+								[1, 1, 1]
+							],
+							itemStyle: {
+								opacity: 1
+							}
+						},
+						{
+							type: 'line3D',
+							lineStyle: {
+								width: 10,
+								color:[0, 0, 0, 1]
+							},
+							data: arr
+						}
+					]
+				});
+				
+				chart.on('click', function(params){
+					console.log(params);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id='chart' style="width: 100%; height: 800px;"></div>
+	</body>
+
+</html>

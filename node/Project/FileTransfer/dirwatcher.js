@@ -1,11 +1,16 @@
-var fs = require('fs');
+var chokidar = require('chokidar');
 
-var watcher = function(){
-    fs.watch('./tmp', 
-        {encoding: 'buffer'}, 
-        (event, filename) => {
-            console.log(filename);
+var serverStart = (configs) => {
+
+    chokidar.watch(
+        configs.watchDir,
+        { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
+            console.log(event, path);
         });
 }
 
-console.log(watcher);
+var c = {
+    watchDir: "/Users/kfzx-luoxu/"
+}
+
+serverStart(c);
